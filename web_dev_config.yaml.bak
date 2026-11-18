@@ -1,0 +1,15 @@
+# Proxy development milik Flutter (3.38+), dipakai otomatis oleh `flutter run -d chrome`.
+# Hanya berlaku saat development di web; Android/device memanggil API langsung.
+server:
+  proxy:
+    # API login soal tidak mengirim header CORS.
+    - target: "https://mediadwi.com/api/"
+      prefix: "/api/"
+      replace: ""
+    # Host logo klub juga tidak mengirim header CORS.
+    - target: "https://r2.thesportsdb.com/images/media/team/badge/"
+      prefix: "/badge/"
+      replace: ""
+    - target: "https://www.thesportsdb.com/images/media/team/badge/"
+      prefix: "/badge-www/"
+      replace: ""

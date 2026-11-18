@@ -1,0 +1,10 @@
+server:
+  proxy:
+    - target: "https://mediadwi.com/api/"
+      prefix: "/api/"
+      replace: ""
+    - target: "https://r2.thesportsdb.com"
+      prefix: "/badge/"
+    - target: "https://www.thesportsdb.com/images/media/team/badge/"
+      prefix: "/badge-www/"
+      replace: ""
